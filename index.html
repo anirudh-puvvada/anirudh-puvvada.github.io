@@ -3,96 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Portfolio</title>
+  <title>Anirudh Puvvada | Student Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #1e90ff;
+      --bg-color: #f4f4f4;
+      --card-bg: #fff;
+      --text-color: #333;
+      --nav-height: 60px;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header, section, footer {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
     header {
-      background: #1e90ff;
+      background: var(--primary-color);
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 100px 20px 60px;
+      position: relative;
     }
     nav {
-      text-align: center;
-      margin-top: 10px;
+      background: var(--primary-color);
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: var(--nav-height);
+      z-index: 999;
     }
     nav a {
-      margin: 0 15px;
-      text-decoration: none;
       color: white;
-      font-weight: bold;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.7;
     }
     section {
-      background: white;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.6s forwards;
     }
-    h2 {
-      color: #1e90ff;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    h1, h2 {
+      color: var(--primary-color);
     }
     footer {
       text-align: center;
+      padding: 20px;
       font-size: 0.9em;
       color: #777;
+    }
+    .resume-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .resume-btn:hover {
+      background: #187bcd;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .testimonial {
+      font-style: italic;
+      background: #eef6ff;
+      padding: 15px;
+      border-left: 4px solid var(--primary-color);
+      margin-top: 15px;
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 60px 20px;
+      }
+      nav a {
+        margin: 0 10px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Hi, I'm [Student Name]</h1>
-    <p>10th Grade Student | Science Enthusiast | Future Leader</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Hi, I'm Anirudh Puvvada</h1>
+    <p>10th Grade Student | STEM Enthusiast | Future Leader</p>
+    <a class="resume-btn" href="resume.pdf" target="_blank">Download Resume</a>
   </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I'm a passionate 10th grader with interests in STEM, public speaking, and leadership. I enjoy participating in science fairs, debate tournaments, and coding projects. My goal is to make a positive impact through innovation and collaboration.</p>
+    <p>I’m a high school student passionate about science, technology, and leadership. Whether it's building robots, solving global issues through Future Cities, or debating complex topics—I'm driven by curiosity and a desire to make an impact.</p>
   </section>
 
   <section id="achievements">
     <h2>Achievements</h2>
     <ul>
-      <li>2nd Place, State Future Cities Competition</li>
-      <li>Top 10%, National Debate Tournament</li>
-      <li>Science Bowl Regional Finalist</li>
-      <li>Founder, Finance Future Club</li>
+      <li>🏆 2nd Place – State Future Cities Competition</li>
+      <li>🎤 National Debate Top 10%</li>
+      <li>🔬 Science Bowl Regional Finalist</li>
+      <li>💼 Founder – Finance Future Club</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>LogicLab Jr:</strong> An educational nonprofit introducing middle schoolers to logic and critical thinking</li>
-      <li><strong>AI + Finance Blog:</strong> Personal writing on how AI is changing the future of investing</li>
-      <li><strong>Science Fair:</strong> "Do Energy Drinks Affect Heart Rate?" — data-driven experiment</li>
+      <li><strong>LogicLab Jr:</strong> A nonprofit teaching middle schoolers logic and critical thinking</li>
+      <li><strong>Science Research:</strong> "Do Energy Drinks Affect Heart Rate?" – Data-driven experiment</li>
+      <li><strong>Blog on AI & Finance:</strong> Exploring how AI is changing investing</li>
     </ul>
+    <div class="testimonial">“Anirudh’s work ethic and curiosity are inspiring. He brings both creativity and discipline to every project.” – Coach Miller</div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Coming soon: reflections on learning, competitions, and the journey of being a student leader.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>📧 Email: yourname@example.com</p>
-    <p>🌐 LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p>📧 Email: anirudh@example.com</p>
+    <p>🔗 LinkedIn: <a href="#" target="_blank">linkedin.com/in/anirudhpuvvada</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 [Student Name]. All rights reserved.</p>
+    <p>&copy; 2025 Anirudh Puvvada. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
